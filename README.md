@@ -3,8 +3,7 @@
 A lightweight calculator built in Unity that evaluates long expressions using **DMAS/BODMAS** (Multiplication/Division before Addition/Subtraction, left→right). It ships with a custom expression parser/evaluator—no built‑in evaluators or third‑party libraries—built specifically for the GameBee Studio assignment.
 
 **Live demo:**  
-- Itch.io: https://<your-itch-username>.itch.io/dmas-calculator  
-- GitHub Pages (optional): https://padfoot33.github.io/Unity-Calculator/
+- Itch.io: https://padfoot007.itch.io/unity-calculator  
 
 **Source repo:** https://github.com/padfoot33/Unity-Calculator
 
@@ -48,21 +47,6 @@ No `DataTable.Compute`, no third‑party expression libraries, and no Unity inte
 
 ---
 
-## Project structure
-
-```
-Assets/
-  Scripts/
-    CalculatorUI.cs           // UI glue: builds expression, guards input, formats result
-    KeypadButton.cs           // Prefab script: emits token string on click
-    ExpressionEvaluator.cs    // Pure logic: tokenize → DMAS two‑pass → result
-  UI/
-    (Canvas, TMP labels, Button prefab, etc.)
-ProjectSettings/
-...
-```
-
----
 
 ## Getting started
 
@@ -75,32 +59,6 @@ If keyboard doesn’t respond:
 
 ---
 
-## Build & publish (WebGL)
-
-### Unity build
-1. **File → Build Settings → WebGL** → *Add Open Scenes* → **Switch Platform**.  
-2. **Player Settings → Publishing Settings**  
-   - **Itch.io**: **Compression = Brotli** (or Gzip), **Decompression Fallback = Off**.  
-   - **GitHub Pages**: **Compression = Gzip/Brotli** **+ Decompression Fallback = On**, or **Compression = Disabled**.  
-3. **Build** to a clean folder (e.g., `Builds/WebGL/`). You should get:
-   ```
-   index.html
-   Build/
-   TemplateData/
-   ```
-
-### Itch.io (recommended for this project)
-- Zip **the contents** of the build folder (so `index.html` is at the zip root).  
-- On itch: **New project → Kind: HTML** → upload zip → tick **“This file will be played in the browser.”**  
-- Set viewport (e.g., `1280×720` for landscape or `720×1280` for portrait) → Save.
-
-### GitHub Pages (optional)
-- Create `/docs` at repo root.  
-- Build directly into `/docs`.  
-- Repo **Settings → Pages → Source**: *Deploy from a branch*, `main` + `/docs`.  
-- Visit `https://<your-username>.github.io/<repo-name>/`.
-
----
 
 ## Edge cases handled
 
@@ -131,11 +89,11 @@ If keyboard doesn’t respond:
 
 ## License
 
-MIT (adjust as you prefer).
+MIT
 
 ---
 
 ## Credits
 
-Built by **Param (Stardust Pixel)** for the GameBee Studio assignment.  
+Built by **Param** for the GameBee Studio assignment.  
 Repo maintainer: [@padfoot33](https://github.com/padfoot33)
