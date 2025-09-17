@@ -14,7 +14,6 @@ public class KeypadButton : MonoBehaviour
 
     private void Awake()
     {
-        // Initialize visuals
         if (label != null && string.IsNullOrEmpty(label.text))
             label.text = token;
     }
@@ -39,7 +38,7 @@ public class KeypadButton : MonoBehaviour
 
     private void OnValidate()
     {
-        // Keep editor view in sync when you change token/icon
+        // Keep editor view in sync when you change token
         if (label != null)
             label.text = token;
     }

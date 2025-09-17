@@ -16,7 +16,6 @@ public class CalculatorInput : MonoBehaviour
         if (calculatorUI == null)
             calculatorUI = GetComponent<CalculatorUI>();
 
-        // Find the action map + actions by name
         var map = actionsAsset.FindActionMap("Calculator", throwIfNotFound: true);
         actDigit = map.FindAction("Digit", true);
         actDot = map.FindAction("Dot", true);

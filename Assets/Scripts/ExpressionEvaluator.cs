@@ -61,6 +61,7 @@ public static class ExpressionEvaluator
             if (expectNumber)
             {
                 int sign = 1;
+                //Check for + & - in the start of expr
                 if (ch == '+' || ch == '-')
                 {
                     if (ch == '-') 
@@ -100,6 +101,7 @@ public static class ExpressionEvaluator
                 if (i == start) 
                     throw new Exception("Invalid number.");
 
+                //Create a str of expr to add to our list
                 string numStr = expr.Substring(start, i - start);
                 if (numStr.StartsWith(".", StringComparison.Ordinal))
                     numStr = "0" + numStr;

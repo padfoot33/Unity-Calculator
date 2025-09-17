@@ -67,9 +67,6 @@ public class CalculatorUI : MonoBehaviour
         RefreshExpressionLabel();
     }
 
-    // -----------------------
-    // Core append helpers
-    // -----------------------
     private void AppendDigitToken(string token)
     {
         if (_expr.Length >= maxExpressionLen) return;
@@ -134,7 +131,6 @@ public class CalculatorUI : MonoBehaviour
             return;
         }
 
-        // Append operator normally
         if (_expr.Length < maxExpressionLen)
             _expr.Append(op);
     }
